@@ -50,11 +50,11 @@
     </div>
 </nav>
 <!--/ Nav End /-->
-<BR><BR><BR><BR>
+<br><br>
 <!-- contacts -->
-<section class="w3l-contact-7 py-5" id="contact">
+<section class="w3l-contact-7 py-5" id="contact" >
     <div class="contacts-9 py-lg-5 py-md-4">
-        <div class="container">
+        <div class="container" >
             <h5 class="small">Contact Details</h5>
             <h3 class="title-big mb-4">Our Offices</h3>
             <div class="top-map">
@@ -71,7 +71,6 @@
                             </p>
                             <p><span class="fa fa-phone"></span><a href="tel:+1(12) 366 411 4999"> +212 66 7 32 32
                                 32</a></p>
-
                             <h5 class="mt-4 mb-3">Business Hours</h5>
                             <p>Mon-Fri: 9:30 – 16:00</p>
                         </address>
@@ -83,7 +82,7 @@
 </section>
 <!-- //contacts -->
 <!-- home page block1 -->
-<section id="about" class="home-services py-5" style="background: white">
+<section id="about" class="home-services py-5" style="background: white;">
     <div class="container py-lg-3">
         <div class="row">
             <div class="col-lg-4 col-sm-6">
@@ -122,34 +121,74 @@
         </div>
     </div>
 </section>
-<!-- //home page block1 -->
-
-<!-- contacts -->
-<section class="w3l-contact-7 py-5">
-    <div class="contacts-9 py-lg-5 py-md-4 py-2">
-        <div class="container">
-            <h5 class="small">Contact team member</h5>
-            <h3 class="title-big mb-4">Drop us a line</h3>
-            <div class="row map-content-9">
-                <div class="col-lg-6">
-                    <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="text-right">
-                        <div class="form-grid">
-                            <input type="text" name="w3lName" id="w3lName" placeholder="Name*" required="">
-                            <input type="email" name="w3lSender" id="w3lSender" placeholder="Email*" required="">
-                            <input type="text" name="w3lPhone" id="w3lPhone" placeholder="Phone number*" required="">
-                            <input type="text" name="w3lSubject" id="w3lSubject" placeholder="Subject">
-                        </div>
-                        <textarea name="w3lMessage" id="w3lMessage" placeholder="Message"></textarea>
-                        <button type="submit" class="btn btn-primary btn-style mt-3">Submit</button>
-                    </form>
+<br><br>
+<!-- Contact Us Area Start -->
+<section class="contact--us-area section-padding-100-0">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Us Thumb -->
+            <div class="col-12 col-lg-6">
+                <div class="contact-us-thumb mb-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13233.2802575332!2d-6.8676019!3d33.9843118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e9c39cfa1d9e8d7!2sNational%20school%20For%20Computer%20Science!5e0!3m2!1sen!2s!4v1642292575120!5m2!1sen!2s" width="550" height="410" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
-                <div class="col-lg-6 map mt-lg-0 mt-5">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13233.2802575332!2d-6.8676019!3d33.9843118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e9c39cfa1d9e8d7!2sNational%20school%20For%20Computer%20Science!5e0!3m2!1sen!2s!4v1642144907535!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-12 col-lg-6">
+                <div class="contact_from_area mb-100 clearfix">
+                    <!-- Contact Heading -->
+                    <div class="contact-heading">
+                        <h4><strong>Contacter-Nous</strong></h4>
+                        <p>envoyer nous votre message</p>
+                    </div>
+                    <div class="contact_form">
+                        <form action="#" method="post">
+                            <div class="contact_input_area">
+                                <div class="row">
+                                    <!-- Form Group -->
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control mb-30" name="nomUserCt" id="name" placeholder="Votre Nom" required>
+                                        </div>
+                                    </div>
+                                    <!-- Form Group -->
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control mb-30" name="prenomUserCt" id="name-2" placeholder="Votre Prénom" required >
+                                        </div>
+                                    </div>
+                                    <!-- Form Group -->
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control mb-30" name="emailUserCt" id="email" placeholder="E-mail" required>
+                                        </div>
+                                    </div>
+                                    <!-- Form Group -->
+                                    <div class="col-12 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control mb-30" name="sujetCt" id="subject" placeholder="Votre Sujet" required>
+                                        </div>
+                                    </div>
+                                    <!-- Form Group -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea  class="form-control mb-30" id="message" name="messageCt" cols="30" rows="6" placeholder="Message" required></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Button -->
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-outline-danger btn-lg" name="sendMsgCt">Send Message <i class="zmdi zmdi-long-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- Contact Us Area End -->
 <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
     <footer>
@@ -173,6 +212,5 @@
 </section>
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
 </body>
 </html>

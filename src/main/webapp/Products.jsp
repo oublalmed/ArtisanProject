@@ -11,8 +11,32 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
+    <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+    <!--- start-rate---->
+    <script src="js/jstarbox.js"></script>
+    <link rel="stylesheet" href="css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+    <script type="text/javascript">
+        jQuery(function() {
+            jQuery('.starbox').each(function() {
+                var starbox = jQuery(this);
+                starbox.starbox({
+                    average: starbox.attr('data-start-value'),
+                    changeable: starbox.hasClass('unchangeable') ? false : starbox.hasClass('clickonce') ? 'once' : true,
+                    ghosting: starbox.hasClass('ghosting'),
+                    autoUpdateAverage: starbox.hasClass('autoupdate'),
+                    buttons: starbox.hasClass('smooth') ? false : starbox.attr('data-button-count') || 5,
+                    stars: starbox.attr('data-star-count') || 5
+                }).bind('starbox-value-changed', function(event, value) {
+                    if(starbox.hasClass('random')) {
+                        var val = Math.random();
+                        starbox.next().text(' '+val);
+                        return val;
+                    }
+                })
+            });
+        });
+    </script>
+    <!---//End-rate---->
     <!-- Main Stylesheet File -->
     <link href="css/style1.css" rel="stylesheet">
     <title>Artisan - Plateforme Artisanat</title>
@@ -91,10 +115,17 @@
                                         <span class="w-ctegory">Web Design</span> /
                                         <span class="w-date">18 Sep. 2018</span>
                                     </div>
+                                    <div class="mid-2">
+                                        <p ><label>$100.00</label></p>
+                                        <div class="block">
+                                            <div class="starbox small ghosting"> </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -104,9 +135,9 @@
             </div>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-3.jpg" alt="" class="img-fluid" />
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -119,7 +150,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +175,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +200,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +225,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +250,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +281,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +306,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -300,7 +331,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +356,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -350,7 +381,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -375,7 +406,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -402,7 +433,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -427,7 +458,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -452,7 +483,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -477,7 +508,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -502,7 +533,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -527,7 +558,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -554,7 +585,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -579,7 +610,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -604,7 +635,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -629,7 +660,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -654,7 +685,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
@@ -679,7 +710,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="ion-ios-plus-outline"></span>
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
                                     </div>
                                 </div>
                             </div>
