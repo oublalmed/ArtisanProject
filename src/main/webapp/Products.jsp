@@ -12,31 +12,9 @@
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
-    <!--- start-rate---->
-    <script src="js/jstarbox.js"></script>
-    <link rel="stylesheet" href="css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
-    <script type="text/javascript">
-        jQuery(function() {
-            jQuery('.starbox').each(function() {
-                var starbox = jQuery(this);
-                starbox.starbox({
-                    average: starbox.attr('data-start-value'),
-                    changeable: starbox.hasClass('unchangeable') ? false : starbox.hasClass('clickonce') ? 'once' : true,
-                    ghosting: starbox.hasClass('ghosting'),
-                    autoUpdateAverage: starbox.hasClass('autoupdate'),
-                    buttons: starbox.hasClass('smooth') ? false : starbox.attr('data-button-count') || 5,
-                    stars: starbox.attr('data-star-count') || 5
-                }).bind('starbox-value-changed', function(event, value) {
-                    if(starbox.hasClass('random')) {
-                        var val = Math.random();
-                        starbox.next().text(' '+val);
-                        return val;
-                    }
-                })
-            });
-        });
-    </script>
-    <!---//End-rate---->
+
+    <!------ Include the above in your HEAD tag ---------->
+
     <!-- Main Stylesheet File -->
     <link href="css/style1.css" rel="stylesheet">
     <title>Artisan - Plateforme Artisanat</title>
@@ -46,7 +24,7 @@
 <!--/ Nav Star /-->
 <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav" style="background-color: black">
     <div class="container">
-        <a class="navbar-brand js-scroll" href="#page-top"><span class="fa fa-paint-brush"></span>  Artisan</a>
+        <a class="navbar-brand js-scroll" href="#page-top"><span class="fa fa-paint-brush"></span> Artisan</a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
                 aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span></span>
@@ -70,19 +48,15 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="index.jsp">Sign Up</a>
                 </li>
+                &nbsp
+                <li class="nav-item">
+                    <button class="btn btn-outline-secondary" style="border: none"><strong> <span class="iconify" data-icon="ion:cart-outline" style="color: #FFFFFF;"></span> ( 0 )</strong> </button>
+                </li>
+
             </ul>
-            &nbsp &nbsp &nbsp
+
         </div>
 
-        <div class="mobile-position">
-            <nav class="navigation">
-                <div class="theme-switch-wrapper">
-                        <div class="mode-container">
-                            <i class="fa fa-shopping-basket" aria-hidden="true" style="color: white"><strong> ( 0 )</strong></i>
-                        </div>
-                </div>
-            </nav>
-        </div>
     </div>
 </nav>
 
@@ -100,25 +74,74 @@
                 </div>
             </div>
         </div>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .rate {
+                float: left;
+                height: 40px;
+                padding: 0 10px;
+            }
+            .rate:not(:checked) > input {
+                position:absolute;
+                top:-9999px;
+            }
+            .rate:not(:checked) > label {
+                float:right;
+                width:1em;
+                overflow:hidden;
+                white-space:nowrap;
+                cursor:pointer;
+                font-size:30px;
+                color:#ccc;
+            }
+            .rate:not(:checked) > label:before {
+                content: '★ ';
+            }
+            .rate > input:checked ~ label {
+                color: #be3131;
+            }
+            .rate:not(:checked) > label:hover,
+            .rate:not(:checked) > label:hover ~ label {
+                color: #be3131;
+            }
+            .rate > input:checked + label:hover,
+            .rate > input:checked + label:hover ~ label,
+            .rate > input:checked ~ label:hover,
+            .rate > input:checked ~ label:hover ~ label,
+            .rate > label:hover ~ input:checked ~ label {
+                color: #be3131;
+            }
+        </style>
         <div class="row">
             <div class="col-md-4">
                 <div class="work-box">
                     <a href="img/work-1.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-1.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-1.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <h2 class="w-title">Lorem impsum dolor</h2>
+                                    <h2 class="w-title">Tapis d'Atlas</h2>
                                     <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
+                                        <span class="w-ctegory">Tapis marocaine</span> /
+                                        <span class="w-price">1000DH</span>
                                     </div>
                                     <div class="mid-2">
-                                        <p ><label>$100.00</label></p>
-                                        <div class="block">
-                                            <div class="starbox small ghosting"> </div>
+                                        <div class="rate">
+                                            <input type="radio" id="star5" name="rate" value="5" checked/>
+                                            <label for="star5" title="text">5 stars</label>
+                                            <input type="radio" id="star4" name="rate" value="4" checked/>
+                                            <label for="star4" title="text">4 stars</label>
+                                            <input type="radio" id="star3" name="rate" value="3" checked/>
+                                            <label for="star3" title="text">3 stars</label>
+                                            <input type="radio" id="star2" name="rate" value="2" />
+                                            <label for="star2" title="text">2 stars</label>
+                                            <input type="radio" id="star1" name="rate" value="1" />
+                                            <label for="star1" title="text">1 star</label>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -137,7 +160,7 @@
                 <div class="work-box">
                     <a href="img/work-3.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-3.jpg" alt="" class="img-fluid" width="275" height="183"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -162,7 +185,7 @@
                 <div class="work-box">
                     <a href="img/work-3.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-3.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -187,7 +210,7 @@
                 <div class="work-box">
                     <a href="img/work-4.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-4.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-4.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -212,7 +235,7 @@
                 <div class="work-box">
                     <a href="img/work-5.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-5.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-5.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -237,7 +260,7 @@
                 <div class="work-box">
                     <a href="img/work-6.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-6.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-6.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -268,7 +291,7 @@
                 <div class="work-box">
                     <a href="img/work-1.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-1.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-1.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -291,9 +314,9 @@
             </div>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-12.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-12.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -318,7 +341,7 @@
                 <div class="work-box">
                     <a href="img/work-3.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-3.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -341,9 +364,9 @@
             </div>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-4.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-13.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-4.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-13.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -368,7 +391,7 @@
                 <div class="work-box">
                     <a href="img/work-5.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-5.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-5.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -393,7 +416,159 @@
                 <div class="work-box">
                     <a href="img/work-6.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-6.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-6.jpg" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Studio Big Bang</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> /
+                                        <span class="w-date">18 Sep. 2017</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="work-box">
+                    <a href="img/work-13.jpg" data-lightbox="gallery-mf">
+                        <div class="work-img">
+                            <img src="img/work-13.jpg" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Lorem impsum dolor</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> /
+                                        <span class="w-date">18 Sep. 2018</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="work-box">
+                    <a href="img/work-14.jpg data-lightbox="gallery-mf">
+                        <div class="work-img">
+                            <img src="img/work-12.jpg" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Loreda Cuno Nere</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> /
+                                        <span class="w-date">18 Sep. 2018</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="work-box">
+                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
+                        <div class="work-img">
+                            <img src="img/work-8.jpg.jpg" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Mavrito Lana Dere</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> /
+                                        <span class="w-date">18 Sep. 2018</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="work-box">
+                    <a href="img/work-4.jpg" data-lightbox="gallery-mf">
+                        <div class="work-img">
+                            <img src="img/work-4.jpg" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Bindo Laro Cado</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> /
+                                        <span class="w-date">18 Sep. 2018</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="work-box">
+                    <a href="img/work-5.jpg" data-lightbox="gallery-mf">
+                        <div class="work-img">
+                            <img src="img/work-5.jpg" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Studio Lena Mado</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> /
+                                        <span class="w-date">18 Sep. 2018</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <span class="iconify" data-icon="ion:cart-outline"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="work-box">
+                    <a href="img/work-6.jpg" data-lightbox="gallery-mf">
+                        <div class="work-img">
+                            <img src="img/work-6.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -420,7 +595,7 @@
                 <div class="work-box">
                     <a href="img/work-1.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-1.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-9.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -445,7 +620,7 @@
                 <div class="work-box">
                     <a href="img/work-2.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-2.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -470,7 +645,7 @@
                 <div class="work-box">
                     <a href="img/work-3.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-13.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -495,7 +670,7 @@
                 <div class="work-box">
                     <a href="img/work-4.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-4.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-15.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -520,7 +695,7 @@
                 <div class="work-box">
                     <a href="img/work-5.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-5.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-5.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -545,159 +720,7 @@
                 <div class="work-box">
                     <a href="img/work-6.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-6.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Big Bang</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2017</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-1.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-1.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Lorem impsum dolor</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-2.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Loreda Cuno Nere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-4.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-4.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Bindo Laro Cado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-5.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-5.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Lena Mado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-6.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-6.jpg" alt="" class="img-fluid" />
+                            <img src="img/work-6.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">

@@ -92,9 +92,6 @@
             </div><br>
             <div class="wthree-field">
                 <div class="row">
-                    <div class="col-sm">
-                <button type="button" class="btn btn-outline-secondary" id="admin">Admin</button>
-                    </div>
                         <div class="col-sm">
                 <button type="button" class="btn btn-outline-secondary" id="client">Client</button>
                         </div>
@@ -135,6 +132,11 @@
                         </div>
                     </div>
                     <div class="field-group">
+                        &nbsp &nbsp
+                        <input name="Male" id="Male" type="radio" value="Male"  required >  <p style="color: white">    Male</p> &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp <input name="Female" id="Female" type="radio" value="Female"  required>  <p style="color: white">   Female</p>
+                    </div>
+                    <div class="field-group">
                         <span class="fa fa-lock" aria-hidden="true"></span>
                         <div class="wthree-field">
                             <input name="password" id="pass" type="Password" placeholder="Password">
@@ -146,39 +148,53 @@
                 </form>
             </div>
             <div class="content-bottom" id="Artisanform" style=" display: block;">
-                <form action="LoginServlet" method="post">
+                <form action="/RegisterArtisan" method="post">
                     <div class="field-group">
                         <span class="fa fa-user" aria-hidden="true"></span>
                         <div class="wthree-field">
-                            <input name="username" id="nomAr" type="text" value="" placeholder="First name " required>
+                            <input name="nomAr" id="nomAr" type="text" value="" placeholder="First name " required>
                         </div>
                     </div>
                     <div class="field-group">
                         <span class="fa fa-user" aria-hidden="true"></span>
                         <div class="wthree-field">
-                            <input name="username" id="prenomAr" type="text" value="" placeholder="Last name" required>
+                            <input name="prenomAr" id="prenomAr" type="text" value="" placeholder="Last name" required>
                         </div>
                     </div>
                     <div class="field-group">
                         <span class="fa fa-user" aria-hidden="true"></span>
                         <div class="wthree-field">
-                            <input name="cin" id="CIN" type="text" value="" placeholder="CIN" required>
+                            <input name="cinAr" id="CIN" type="text" value="" placeholder="CIN" required>
                         </div>
                     </div>
                     <div class="field-group">
                         <div class="wthree-field">
-                            <input name="username" id="age" type="date" value="" placeholder="Age" required>
+                            <input name="dateNai" id="age" type="date" value="" placeholder="Age" required>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="wthree-field" > &nbsp
+                            <select style="background: transparent;border: none;width: 98%;height: 15%;font-family: 'Times New Roman'" name="idcat">
+                                <option> Select categorie </option>
+                                <option> Tannerie </option>
+                                <option> cuir et maroquinerie </option>
+                                <option> Le fer forgé </option>
+                                <option> La céramique et la poterie </option>
+                                <option>  Les tapis marocains  </option>
+                                <option>  Les bijoux  </option>
+                            </select>
                         </div>
                     </div>
                     <div class="field-group" >
+                        <span class="fa fa-mail-reply" aria-hidden="true"></span>
                         <div class="wthree-field">
-                            <input name="Email" id="emailAr" type="email" value="" placeholder="Email" required>
+                            <input name="mailAr" id="emailAr" type="email" value="" placeholder="Email" required>
                         </div>
                     </div>
                     <div class="field-group">
                         <span class="fa fa-phone" aria-hidden="true"></span>
                         <div class="wthree-field">
-                            <input name="username" id="tel" type="text" value="" placeholder="phone number" required>
+                            <input name="telAr" id="tel" type="text" value="" placeholder="phone number" required>
                         </div>
                     </div>
                     <div class="field-group">
@@ -190,7 +206,7 @@
                     <div class="field-group">
                         <span class="fa fa-picture-o" aria-hidden="true"></span>
                         <div class="wthree-field">
-                            <input name="Image" id="Image" type="file" value="" placeholder="Image" required>
+                            <input name="ImageAr" id="Image" type="file" value="" placeholder="Image" required>
                         </div>
                     </div>
                     <div class="wthree-field">

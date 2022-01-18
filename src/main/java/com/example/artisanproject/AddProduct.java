@@ -32,7 +32,9 @@ public class AddProduct extends HttpServlet {
             stm.setString(4,price);
             stm.setString(5,qte);
             stm.setString(6,image);
-            stm.executeUpdate();
+            int tset = stm.executeUpdate();
+
+
         }
         catch (Exception e){
             System.out.println(e.getMessage());
