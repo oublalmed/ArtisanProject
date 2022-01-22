@@ -3,6 +3,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.artisansproject.Models.Artisans" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="com.example.artisansproject.Models.Products" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -26,7 +27,10 @@
 </head>
 <body id="page-top">
 <!--/ Nav Star /-->
-
+<%
+    List<Artisans> artisansList = (List<Artisans>) session.getAttribute("artisansList");
+    for (int i = 0; i < artisansList.size(); i++) {
+%>
 <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav" style="background-color: transparent">
     <div class="container">
         <a class="navbar-brand js-scroll" href="Home.jsp"><span class="fa fa-paint-brush"></span> Artisan</a>
@@ -36,17 +40,15 @@
             <span></span>
             <span></span>
         </button>
-        <%
-            List<Artisans> artisansList= (List<Artisans>) session.getAttribute("artisansList");
-            for (int i=0;i<artisansList.size();i++){
-        %>
         <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll active" href="#"><%=artisansList.get(i).getNomArtisan()+" "+artisansList.get(i).getPrenomArtisan() %></a>
+                    <a class="nav-link js-scroll active"
+                       href="#"><%=artisansList.get(i).getNomArtisan() + " " + artisansList.get(i).getPrenomArtisan() %>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll" href="Products.jsp">Log out</a>
+                    <a class="nav-link js-scroll" href="LogOut">Log out</a>
                 </li>
 
             </ul>
@@ -65,8 +67,10 @@
             </div>
 
             <div class="employer-name" STYLE="display: grid;align-content: end;">
-                <h4 style="font-size: 30px;color: #fff;line-height: 35px;font-weight: 300;"><%=artisansList.get(i).getNomArtisan()+" "+artisansList.get(i).getPrenomArtisan() %></h4>
-                <p style="font-size: 16px;color: #eee;line-height: 25px;"><%=artisansList.get(i).getLibelleCat()%></p>
+                <h4 style="font-size: 30px;color: #fff;line-height: 35px;font-weight: 300;"><%=artisansList.get(i).getNomArtisan() + " " + artisansList.get(i).getPrenomArtisan() %>
+                </h4>
+                <p style="font-size: 16px;color: #eee;line-height: 25px;"><%=artisansList.get(i).getLibelleCat()%>
+                </p>
             </div>
             <div class="employer-apply"
                  style="text-align: right;display: grid;align-content: end;grid-template-columns: auto auto auto;justify-content: end;grid-gap: 5px;padding-right: 10%">
@@ -107,7 +111,6 @@
         <br>
     </div>
 </section>
-
 <%
     }
 %>
@@ -184,6 +187,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -205,17 +209,29 @@
                             <th scope="col">Actions</th>
                         </tr>
                         </thead>
+                        <%
+                            List<Products> productsList = (List<Products>) session.getAttribute("productsList");
+                            for (int j = 0; j < productsList.size(); j++) {
+                        %>
                         <tbody>
                         <tr>
                             <th scope="row"></th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
+                            <td><%=productsList.get(j).getNamePrd()%>
+                            </td>
+                            <td><%=productsList.get(j).getPrice()%>
+                            </td>
+                            <td><%=productsList.get(j).getQte()%>
+                            </td>
                             <td><a href="">
-                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"
+                                                                                aria-hidden="true"></i> Delete
+                                </button>
                             </a></td>
                         </tr>
                         </tbody>
+                        <%
+                            }
+                        %>
                     </table>
                 </div>
             </div>
@@ -233,7 +249,9 @@
             from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
             undoubtable source</p>
         <br>
-        <button type="button" class="btn btn-outline-danger btn-lg"  data-toggle="modal" data-target=".bd-ex-modal-lg">Show orders</button>
+        <button type="button" class="btn btn-outline-danger btn-lg" data-toggle="modal" data-target=".bd-ex-modal-lg">
+            Show orders
+        </button>
         <br><br>
     </div>
     <div class="modal fade bd-ex-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"

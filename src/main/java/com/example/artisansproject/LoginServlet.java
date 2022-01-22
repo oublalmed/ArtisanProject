@@ -2,7 +2,9 @@ package com.example.artisansproject;
 
 import com.example.artisansproject.DAO.ArtisanDao;
 import com.example.artisansproject.DAO.ArtisansDaoImp;
+import com.example.artisansproject.DAO.ProductsDaoImp;
 import com.example.artisansproject.Models.Artisans;
+import com.example.artisansproject.Models.Products;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,11 +40,15 @@ public class LoginServlet extends HttpServlet {
             //  Get column names For Artisans
             if(rs.next()){
                 Artisans artisan = new Artisans();
+                Products product = new Products();
                 artisan.setIdArtisan(rs.getInt("idArtisan"));
                 HttpSession session=request.getSession();
                 ArtisansDaoImp artisansDaoImp=new ArtisansDaoImp();
                 List<Artisans> artisansList= artisansDaoImp.getAllArtisans(artisan.getIdArtisan());
                 session.setAttribute("artisansList",artisansList);
+                ProductsDaoImp productsDaoImp=new ProductsDaoImp();
+                List<Products> productsList= productsDaoImp.getAllProducts(product.getIdArtisan());
+                session.setAttribute("productsList",productsList);
                 request.setAttribute("username", username);
                 request.getRequestDispatcher("ProfilArtisans.jsp").forward(request,response);
             }
