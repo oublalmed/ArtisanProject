@@ -4,6 +4,9 @@
 <%@ page import="com.example.artisansproject.Models.Artisans" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.example.artisansproject.Models.Products" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.PreparedStatement" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -210,17 +213,21 @@
                         </tr>
                         </thead>
                         <%
-                            List<Products> productsList = (List<Products>) session.getAttribute("productsList");
-                            for (int j = 0; j < productsList.size(); j++) {
+                            try{
+                                Class.forName("com.mysql.jdbc.Driver");
+                                Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
+                                PreparedStatement ps = cn.prepareStatement("select * from produits");
+                                ResultSet rs = ps.executeQuery();
+                                while(rs.next()){
                         %>
                         <tbody>
                         <tr>
                             <th scope="row"></th>
-                            <td><%=productsList.get(j).getNamePrd()%>
+                            <td><%=rs.getString("nomProduit")%>
                             </td>
-                            <td><%=productsList.get(j).getPrice()%>
+                            <td><%=rs.getDouble("prixProduits")%>
                             </td>
-                            <td><%=productsList.get(j).getQte()%>
+                            <td><%=rs.getInt("QteProduits")%>
                             </td>
                             <td><a href="">
                                 <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"
@@ -228,10 +235,13 @@
                                 </button>
                             </a></td>
                         </tr>
-                        </tbody>
                         <%
+                                }
+                            }catch (Exception E){
+
                             }
                         %>
+                        </tbody>
                     </table>
                 </div>
             </div>

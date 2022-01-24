@@ -1,4 +1,10 @@
 <%@ page import="java.sql.DriverManager" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.example.artisansproject.Models.Products" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -181,13 +187,22 @@
                     <div class="field-group">
                         <div class="wthree-field" > &nbsp
                             <select style="background: transparent;border: none;width: 98%;height: 15%;font-family: 'Times New Roman'" name="idcat">
-                                <option VALUE="0"> Select categorie </option>
-                                <option VALUE="1"> Tannerie </option>
-                                <option VALUE="2"> cuir et maroquinerie </option>
-                                <option VALUE="3"> Le fer forgé </option>
-                                <option  VALUE="4"> La céramique et la poterie </option>
-                                <option  VALUE="5">  Les tapis marocains  </option>
-                                <option  VALUE="6">  Les bijoux  </option>
+                                <option>Selet Catégorie </option>
+                                <%
+                                    try{
+                                        Class.forName("com.mysql.jdbc.Driver");
+                                        Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
+                                        PreparedStatement ps = cn.prepareStatement("select * from categories");
+                                        ResultSet rs = ps.executeQuery();
+                                        while(rs.next()){
+                                                %>
+                                                <option><%=rs.getString("lebelleCat")%></option>
+                                                <%
+                                        }
+                                    }catch (Exception E){
+
+                                    }
+                                %>
                             </select>
                         </div>
                     </div>

@@ -3,6 +3,7 @@ package com.example.artisansproject.DAO;
 
 import com.example.artisansproject.Models.Artisans;
 
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -44,5 +45,31 @@ public class ArtisansDaoImp implements ArtisanDao{
         return null;
     }
 
+    @Override
+    public int DeleteArtisan(int idArtisan) {
+        PrintWriter out = null;
+        query="DELETE FROM artisan WHERE idArtisan=?";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
+            ps= cn.prepareStatement(query);
+            ps.setInt(1,idArtisan);
+            int i =ps.executeUpdate();
+            if(i>0){
+                out.print("ok");
+                return 1;
 
-}
+            }
+            else{
+                out.print("ok by");
+                return 0;
+            }
+        }
+        catch (Exception e){
+            System.out.println("Connection Error"+e);
+        }
+        out.print("ok erreur");
+        return -1;
+    }
+
+    }

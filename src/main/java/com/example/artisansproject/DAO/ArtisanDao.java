@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ArtisanDao {
     public List <Artisans> getAllArtisans(int id);
+    public  int DeleteArtisan(int idArtisan);
 }
