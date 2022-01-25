@@ -67,13 +67,13 @@
                         <a href="Home.jsp" class="">Home</a>
                     </li>
                     <li class="">
-                        <a href="#" class="">About Us</a>
+                        <a href="AboutUs.jsp" class="">About Us</a>
                     </li>
                     <li class="">
                         <a href="Artisans.jsp" class="">Artisans</a>
                     </li>
                     <li class="">
-                        <a href="#" class="">Contact</a>
+                        <a href="ContactUs.jsp" class="">Contact</a>
                     </li>
                 </ul>
             </div>

@@ -68,5 +68,24 @@ public class ArtisansDaoImp implements ArtisanDao{
         }
         return -1;
     }
+    public int Approuver(int idArtisan) {
 
+        query = "UPDATE artisan SET etat = 'Active'   Where idArtisan = ?";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
+            ps = cn.prepareStatement(query);
+            ps.setInt(1, idArtisan);
+            int i = ps.executeUpdate();
+            if (i > 0) {
+                return 1;
+
+            } else {
+                return 0;
+            }
+        } catch (Exception e) {
+            System.out.println("Connection Error" + e);
+        }
+        return -1;
+    }
     }

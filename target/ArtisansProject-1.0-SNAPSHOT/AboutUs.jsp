@@ -89,7 +89,6 @@
 </div>
 <hr>
 <section class="w3l-wecome-content-6">
-    <!-- /content-6-section -->
     <div class="ab-content-6-mian py-5">
         <div class="container py-lg-5">
             <div class="welcome-grids row">
@@ -112,9 +111,6 @@
         </div>
     </div>
 </section>
-<hr color="#be3131">
-
-<!-- /specification-6-->
 <div class="specification-6-mian py-5">
     <div class="container py-lg-5" style="background: whitesmoke">
         <div class="row story-6-grids text-left">

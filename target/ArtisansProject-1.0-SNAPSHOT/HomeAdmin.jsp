@@ -137,7 +137,7 @@
                 try{
                     Class.forName("com.mysql.jdbc.Driver");
                     Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
-                    PreparedStatement ps = cn.prepareStatement("select * from Artisan A , Categories C where A.idCat = C.idCat");
+                    PreparedStatement ps = cn.prepareStatement("select * from Artisan A , Categories C where A.idCat = C.idCat and etat='Active'");
                     ResultSet rs = ps.executeQuery();
                     while(rs.next()){
             %>
@@ -251,7 +251,7 @@
                         try{
                             Class.forName("com.mysql.jdbc.Driver");
                             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
-                            PreparedStatement ps = cn.prepareStatement("select * from Artisan A , Categories C where A.idCat = C.idCat");
+                            PreparedStatement ps = cn.prepareStatement("select * from Artisan A , Categories C where A.idCat = C.idCat and etat='No Active'");
                             ResultSet rs = ps.executeQuery();
                             Artisans artisan = new Artisans();
                             while(rs.next()){
@@ -279,11 +279,13 @@
                             </button>
                             </form>
                         </td>
-                        <td><a href="">
-                            <button type="button" class="btn btn-success" ><i class="fa fa-check-square-o"
-                                                                             aria-hidden="true"></i> Approuve
+                        <td>
+                            <form method="post" action="ApprouveCptArt">
+                                <input type="hidden" name="idArtisan" value="<%=rs.getInt("idArtisan")%>">
+                            <button type="submit" class="btn btn-success" ><i class="fa fa-check-square-o" aria-hidden="true"></i> Approuve
                             </button>
-                        </a></td>
+                            </form>
+                        </td>
                     </tr>
                     <%
                             }

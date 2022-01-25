@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false","root","");
-            PreparedStatement stm= con.prepareStatement("select * from artisan where mailArtisan='"+username+"' and password='"+password+"'");
+            PreparedStatement stm= con.prepareStatement("select * from artisan where mailArtisan='"+username+"' and password='"+password+"'and etat='Active'");
             ResultSet rs= stm.executeQuery();
 
             //  Get column names For Artisans
