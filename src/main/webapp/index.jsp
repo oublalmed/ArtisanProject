@@ -132,7 +132,7 @@
                             <a href="SignUp.jsp" class="">Create Account</a>
                         </li>
                         <li class="">
-                            <a href="#" class="text-right">Need Help?</a>
+                            <a href="LoginAdmin.jsp" class="text-right">Login as Admin ?</a>
                         </li>
                         <li class="clearfix"></li>
                     </ul>
@@ -176,7 +176,7 @@
                             <a href="SignUp.jsp" class="">Create Account</a>
                         </li>
                         <li class="">
-                            <a href="#" class="text-right">Need Help?</a>
+                            <a href="LoginAdmin.jsp" class="text-right">Login as Admin ?</a>
                         </li>
                         <li class="clearfix"></li>
                     </ul>

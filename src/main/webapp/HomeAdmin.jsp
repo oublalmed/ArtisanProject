@@ -45,7 +45,7 @@
                     <a class="nav-link js-scroll " href="AboutUs.jsp">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll active" href="index.jsp">Admin</a>
+                    <a class="nav-link js-scroll active" href="LogOut">Admin</a>
                 </li>
             </ul>
         </div>

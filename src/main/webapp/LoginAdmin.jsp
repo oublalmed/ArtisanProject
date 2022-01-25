@@ -35,14 +35,14 @@
 </div>
 <div class="ls-login box box--big">
     <!-- form starts here -->
-    <form action="/Login" method="post">
+    <form action="LoginAdmin" method="post">
         <div class="agile-field-txt">
             <label><i class="fa fa-user" aria-hidden="true"></i> Username </label>
-            <input type="text" name="name" placeholder="Enter User Name" required=""/>
+            <input type="text" name="nameAdmin" placeholder="Enter User Name" required=""/>
         </div>
         <div class="agile-field-txt">
             <label><i class="fa fa-unlock-alt" aria-hidden="true"></i> password </label>
-            <input type="password" name="password" placeholder="Enter Password" required="" id="myInput" />
+            <input type="password" name="passwordAdmin" placeholder="Enter Password" required="" id="myInput" />
             <div class="agile_label">
                 <input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
                 <label class="check" for="check3">Show password</label>
