@@ -15,9 +15,17 @@ public class Artisans implements Serializable {
     private String idCat;
     private String cinArtisan;
     private String libelleCat;
+    private String ville ;
 
     public Artisans(){
 
+    }
+
+    public Artisans(String nomArtisan, String prenomArtisan, String libelleCat, String ville) {
+        this.nomArtisan = nomArtisan;
+        this.prenomArtisan = prenomArtisan;
+        this.libelleCat = libelleCat;
+        this.ville = ville;
     }
 
     public Artisans(String nomArtisan, String prenomArtisan, String resume, String libelleCat, String image) {
@@ -133,6 +141,14 @@ public class Artisans implements Serializable {
 
     public String getLibelleCat() {
         return libelleCat;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
     }
 
     public void setLibelleCat(String libelleCat) {

@@ -1,4 +1,5 @@
 <%@ page import="java.sql.DriverManager" %>
+<%@ page import="com.example.artisansproject.Models.Clients" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +44,24 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="ContactUs.jsp">Contact Us</a>
                 </li>
+                <%
+                    request.getSession(false);
+                    //Clients client = (Clients) session.getAttribute("client");
+                    if (session == null) {
+                %>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="index.jsp">Sign Up</a>
                 </li>
+                <%
+                }
+                else{
+                %>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll" href="LogOut">Log Out</a>
+                </li>
+                <%
+                    }
+                %>
             </ul>
         </div>
     </div>

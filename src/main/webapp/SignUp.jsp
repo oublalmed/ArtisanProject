@@ -196,7 +196,7 @@
                                         ResultSet rs = ps.executeQuery();
                                         while(rs.next()){
                                                 %>
-                                                <option><%=rs.getString("lebelleCat")%></option>
+                                                <option value="<%=rs.getInt("idCat")%>" ><%=rs.getString("lebelleCat")%></option>
                                                 <%
                                         }
                                     }catch (Exception E){

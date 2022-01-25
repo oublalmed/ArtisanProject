@@ -36,6 +36,22 @@
     <link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
     <!-- Google fonts -->
     <title>Artisan - Plateforme artisanas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#ClientFom").hide();
+            $("#ArtisanForm").hide();
+
+            $("#client").click(function(){
+                $("#ClientFom").show();
+                $("#ArtisanForm").hide();
+            });
+            $("#artisan").click(function(){
+                $("#ArtisanForm").show();
+                $("#ClientFom").hide();
+            });
+        });
+    </script>
 </head>
 <body>
 <section class="main">
@@ -43,7 +59,7 @@
 
         <div class="bottom-grid">
             <div class="logo">
-                <h1> <a href="index.html"><span class="fa fa-paint-brush"></span> Artisan</a></h1>
+                <h1><a href="index.html"><span class="fa fa-paint-brush"></span> Artisan</a></h1>
             </div>
             <div class="links">
                 <ul class="links-unordered-list">
@@ -64,9 +80,24 @@
         </div>
         <div class="content-w3ls">
             <div class="text-center icon">
-                <span class="fa fa-paint-brush"></span>
+                <div class="text-center ">
+                    <h2 style="color: white">Sign In</h2>
+                </div><br>
+                <div class="wthree-field">
+                    <div class="row">
+                        <div class="col-sm">
+                            <button type="button" class="btn btn-outline-secondary" id="client">Client</button>
+                        </div>
+                        <div class="col-sm">
+                            <button type="button" class="btn btn-outline-secondary" id="artisan">Artisan</button>
+                        </div>
+                    </div>
+                </div><BR>
             </div>
-            <div class="content-bottom">
+            <div class="content-bottom" id="ArtisanForm">
+                <div class="text-center ">
+                    <h5 style="color: white">Welcome Artisan </h5>
+                </div><br>
                 <form action="LoginServlet" method="post">
                     <div class="field-group">
                         <span class="fa fa-user" aria-hidden="true"></span>
@@ -77,7 +108,51 @@
                     <div class="field-group">
                         <span class="fa fa-lock" aria-hidden="true"></span>
                         <div class="wthree-field">
-                            <input name="password" id="myInput" type="Password" placeholder="Password">
+                            <input name="password"  type="Password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="wthree-field">
+                        <button type="submit" class="btn">Login</button>
+                    </div>
+                    <ul class="list-login">
+                        <li class="switch-agileits">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                                keep Logged in
+                            </label>
+                        </li>
+                        <li>
+                            <a href="#" class="text-right">forgot password?</a>
+                        </li>
+                        <li class="clearfix"></li>
+                    </ul>
+                    <ul class="list-login-bottom">
+                        <li class="">
+                            <a href="SignUp.jsp" class="">Create Account</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="text-right">Need Help?</a>
+                        </li>
+                        <li class="clearfix"></li>
+                    </ul>
+                </form>
+            </div>
+            <div class="content-bottom" id="ClientFom">
+                <div class="text-center ">
+                    <h5 style="color: white">Welcome Client </h5>
+                </div><br>
+                <form action="LoginClients" method="post">
+                    <div class="field-group">
+                        <span class="fa fa-user" aria-hidden="true"></span>
+                        <div class="wthree-field">
+                            <input name="username"  type="text" value="" placeholder="Username" required>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <span class="fa fa-lock" aria-hidden="true"></span>
+                        <div class="wthree-field">
+                            <input name="password"id="myInput" type="Password" placeholder="Password">
                         </div>
                     </div>
                     <div class="wthree-field">
