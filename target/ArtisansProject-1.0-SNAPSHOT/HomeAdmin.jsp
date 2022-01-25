@@ -272,10 +272,13 @@
                         </td>
                         <td><%=rs.getString("lebelleCat")%>
                         </td>
-                        <td><a href='DeleteArtisan?<%=rs.getInt("idArtisan")%>'>
-                            <button type="button" class="btn btn-danger" ><i class="fa fa-trash-o" aria-hidden="true" ></i> Delete
+                        <td>
+                            <form method="post" action="DeleteArtisan">
+                                <input type="hidden" name="idArtisan" value="<%=rs.getInt("idArtisan")%>">
+                            <button type="submit" class="btn btn-danger" ><i class="fa fa-trash-o" aria-hidden="true" ></i> Delete
                             </button>
-                        </a></td>
+                            </form>
+                        </td>
                         <td><a href="">
                             <button type="button" class="btn btn-success" ><i class="fa fa-check-square-o"
                                                                              aria-hidden="true"></i> Approuve
@@ -342,11 +345,13 @@
                         </td>
                         <td><%=rs.getString("sexe")%>
                         </td>
-                        <td><a href="">
-                            <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"
-                                                                            aria-hidden="true"></i> Delete
+                        <td>
+                            <form method="post" action="DeleteClient">
+                                <input type="hidden" name="idClient" value="<%=rs.getInt("idClient")%>">
+                            <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete
                             </button>
-                        </a></td>
+                            </form>
+                       </td>
                     </tr>
                     <%
                             }
@@ -420,11 +425,13 @@
                         <th scope="row"><%=rs.getInt("idCat")%></th>
                         <td><%=rs.getString("lebelleCat")%>
                         </td>
-                        <td><a href="">
-                            <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"
-                                                                            aria-hidden="true"></i> Delete
+                        <td>
+                            <form method="post" action="DeletCat">
+                            <input type="hidden" name="idCat" value="<%=rs.getInt("idCat")%>">
+                            <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete
                             </button>
-                        </a></td>
+                            </form>
+                        </td>
                     </tr>
                     <%
                             }

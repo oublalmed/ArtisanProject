@@ -56,19 +56,16 @@ public class ArtisansDaoImp implements ArtisanDao{
             ps.setInt(1,idArtisan);
             int i =ps.executeUpdate();
             if(i>0){
-                out.print("ok");
                 return 1;
 
             }
             else{
-                out.print("ok by");
                 return 0;
             }
         }
         catch (Exception e){
             System.out.println("Connection Error"+e);
         }
-        out.print("ok erreur");
         return -1;
     }
 
