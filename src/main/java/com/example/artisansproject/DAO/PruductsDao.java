@@ -7,5 +7,5 @@ import java.util.List;
 public interface PruductsDao {
 
     public List<Products> getAllProducts(int id);
-    public int DeleteProducts(int id);
+    public int DeleteProducts(int idProduit);
 }

@@ -48,6 +48,13 @@ public class LoginServlet extends HttpServlet {
                 request.setAttribute("username", username);
                 request.getRequestDispatcher("ProfilArtisans.jsp").forward(request,response);
             }
+            else{
+
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Invalid Username or Password');");
+                out.println("location='index.jsp';");
+                out.println("</script>");
+            }
         }
         catch (Exception e){
             System.out.println(e.getMessage());

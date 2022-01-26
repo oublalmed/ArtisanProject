@@ -7,6 +7,8 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.nio.file.Paths" %>
+<%@ page import="java.nio.file.Path" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -33,6 +35,7 @@
 <%
     List<Artisans> artisansList = (List<Artisans>) session.getAttribute("artisansList");
     for (int i = 0; i < artisansList.size(); i++) {
+        String filename= Paths.get(artisansList.get(i).getImage()).getFileName().toString();
 %>
 <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav" style="background-color: transparent">
     <div class="container">
@@ -65,8 +68,7 @@
         <div class="d-grid employer-grid"
              style="padding-top: 200px;padding-bottom: 20px;display: grid;grid-template-columns: auto auto 1fr;grid-gap: 20px;display: grid;">
             <div class="employer-title">
-                <img src="img/c2.jpg" class="img-responsive" alt=""
-                     STYLE="border-radius: 50%;border: 5px solid #fcfcfc;padding: 0px;margin-bottom: -120px;width:170px"/>
+                <img src="img/<%=filename%>" class="img-responsive" alt="" STYLE="border-radius: 50%;border: 5px solid #fcfcfc;padding: 0px;margin-bottom: -120px;width:170px"/>
             </div>
 
             <div class="employer-name" STYLE="display: grid;align-content: end;">
@@ -229,11 +231,13 @@
                             </td>
                             <td><%=rs.getInt("QteProduits")%>
                             </td>
-                            <td><a href="">
-                                <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"
-                                                                                aria-hidden="true"></i> Delete
+                            <td>
+                                <form METHOD="post" ACTION="DeletePrd">
+                                    <input type="hidden" name="idProduit" value="<%=rs.getInt("idProduit")%>">
+                                <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete
                                 </button>
-                            </a></td>
+                                </form>
+                           </td>
                         </tr>
                         <%
                                 }

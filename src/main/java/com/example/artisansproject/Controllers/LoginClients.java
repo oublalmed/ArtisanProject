@@ -50,6 +50,12 @@ public class LoginClients extends HttpServlet {
                 request.setAttribute("username", username);
                 request.getRequestDispatcher("Home.jsp").forward(request,response);
                 out.println(session);
+            }   else{
+
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Invalid Username or Password');");
+                out.println("location='index.jsp';");
+                out.println("</script>");
             }
         }
         catch (Exception e){

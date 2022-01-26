@@ -63,4 +63,30 @@ public class ClientsDaoImp implements ClientDao {
         }
         return -1;
     }
+
+    public List<Artisans> SearchArtisan(String SearchArt) {
+
+        List<Artisans> artisansList = new ArrayList<Artisans>();
+        Artisans artisan = new Artisans();
+        ;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
+            PreparedStatement ps = cn.prepareStatement("select * from artisan a , categories c where a.idCat=c.idCat and lebelleCat ='"+SearchArt+"'");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next())
+            {
+                artisan = new Artisans(rs.getString("nomArtisan"),
+                        rs.getString("prenomArtisan"),
+                        rs.getString("ville"),
+                        rs.getString("lebelleCat")
+                );
+                artisansList.add(artisan);
+            }
+            return artisansList;
+        } catch (Exception e) {
+
+        }
+        return null;
+    }
 }

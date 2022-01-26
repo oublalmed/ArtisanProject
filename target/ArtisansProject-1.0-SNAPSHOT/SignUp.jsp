@@ -137,10 +137,10 @@
                             <input name="telcl" id="telcl" type="text" value="" placeholder="phone number" required>
                         </div>
                     </div>
-                    <div class="field-group">
+                    <div class="field-group" >
                         &nbsp &nbsp
-                        <input name="sexe" id="Male" type="radio" value="Male"  required checked>  <p style="color: white">    Male</p> &nbsp &nbsp &nbsp &nbsp
-                        &nbsp &nbsp <input name="sexe" id="Female" type="radio" value="Female"  required>  <p style="color: white">   Female</p>
+                        <input name="sexe" id="Male" type="radio" value="Male"  required checked style="margin-top: 1.1em;">  <p style="color: white;margin-top: 0.60em;">&nbsp &nbsp    Male</p> &nbsp &nbsp &nbsp &nbsp
+                        &nbsp &nbsp <input name="sexe" id="Female" type="radio" value="Female"  required style="margin-top: 1.1em;">  <p style="color: white;margin-top: 0.60em;">&nbsp &nbsp   Female</p>
                     </div>
                     <div class="field-group">
                         <span class="fa fa-phone" aria-hidden="true"></span>
@@ -160,7 +160,7 @@
                 </form>
             </div>
             <div class="content-bottom" id="Artisanform" style=" display: block;">
-                <form action="RegisterArtisan" method="post">
+                <form action="RegisterArtisan" method="post" enctype="multipart/form-data">
                     <div class="field-group">
                         <span class="fa fa-user" aria-hidden="true"></span>
                         <div class="wthree-field">
@@ -186,7 +186,7 @@
                     </div>
                     <div class="field-group">
                         <div class="wthree-field" > &nbsp
-                            <select style="background: transparent;border: none;width: 98%;height: 15%;font-family: 'Times New Roman'" name="idcat">
+                            <select style="background: transparent;border: none;margin-top: 1em;font-family: 'Times New Roman'" name="idcat" >
                                 <option>Selet Catégorie </option>
                                 <%
                                     try{
@@ -219,6 +219,11 @@
                         </div>
                     </div>
                     <div class="field-group">
+                        <div class="wthree-field">
+                            <input name="ville" id="ville" type="text" value="" placeholder="ville " required>
+                        </div>
+                    </div>
+                    <div class="field-group">
                         <span class="fa fa-lock" aria-hidden="true"></span>
                         <div class="wthree-field">
                             <input name="password" id="passAr" type="Password" placeholder="Password">
@@ -227,37 +232,7 @@
                     <div class="field-group">
                         <span class="fa fa-picture-o" aria-hidden="true"></span>
                         <div class="wthree-field">
-                            <input name="ImageAr" id="Image" type="file" value="" placeholder="Image" required>
-                        </div>
-                    </div>
-                    <div class="wthree-field">
-                        <button type="submit" class="btn">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-            <div class="content-bottom" id="Adminform" style=" display: block;">
-                <form action="LoginServlet" method="post">
-                    <div class="field-group">
-                        <span class="fa fa-user" aria-hidden="true"></span>
-                        <div class="wthree-field">
-                            <input name="username" id="nom" type="text" value="" placeholder="First name " required>
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <span class="fa fa-user" aria-hidden="true"></span>
-                        <div class="wthree-field">
-                            <input name="username" id="prenom" type="text" value="" placeholder="Last name" required>
-                        </div>
-                    </div>
-                    <div class="field-group" >
-                        <div class="wthree-field">
-                            <input name="Email" id="email" type="email" value="" placeholder="Email" required>
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <span class="fa fa-lock" aria-hidden="true"></span>
-                        <div class="wthree-field">
-                            <input name="password" id="myInput" type="Password" placeholder="Password">
+                            <input name="ImageAr" id="Image" type="file" value="" placeholder="Image"  required>
                         </div>
                     </div>
                     <div class="wthree-field">
@@ -266,7 +241,6 @@
                 </form>
             </div>
         </div>
-
     </div>
 </section>
 </body>

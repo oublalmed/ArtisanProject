@@ -1,5 +1,6 @@
 package com.example.artisansproject.Controllers;
 
+import com.example.artisansproject.DAO.ClientsDaoImp;
 import com.example.artisansproject.Models.Artisans;
 
 import javax.servlet.*;
@@ -18,30 +19,20 @@ public class SearchArtisan extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-     String SearchArt =  request.getParameter("CatArtisans");
-        List<Artisans> artisansList = new ArrayList<Artisans>();
-        Artisans artisan = new Artisans();;
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
-            PreparedStatement ps = cn.prepareStatement("select * from artisan a , categories c where a.idCat=c.idCat and lebelleCat ='"+SearchArt+"'");
-            ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-
-                artisan = new Artisans(rs.getString("nomArtisan"),
-                        rs.getString("prenomArtisan"),
-                        rs.getString("ville"),
-                        rs.getString("lebelleCat")
-                );
-            }
-            artisansList.add(artisan);
-        }catch (Exception e){
-
-        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String SearchArt= request.getParameter("CatArtisans");
+        System.out.println(SearchArt);
+        HttpSession session =request.getSession();
+        ClientsDaoImp clientsDaoImp=new ClientsDaoImp();
+        List<Artisans> list = clientsDaoImp.SearchArtisan(SearchArt);
+        for (Artisans artisans : list)
+        {
+            System.out.println(artisans.getIdArtisan());
+        }
+        session.setAttribute("list",list);
+        response.sendRedirect("Artisans.jsp");
     }
 }
