@@ -2,6 +2,7 @@ package com.example.artisansproject.DAO;
 
 import com.example.artisansproject.Models.Artisans;
 import com.example.artisansproject.Models.Clients;
+import com.example.artisansproject.Models.Products;
 
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -68,7 +69,7 @@ public class ClientsDaoImp implements ClientDao {
 
         List<Artisans> artisansList = new ArrayList<Artisans>();
         Artisans artisan = new Artisans();
-        ;
+
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
@@ -76,7 +77,8 @@ public class ClientsDaoImp implements ClientDao {
             ResultSet rs = ps.executeQuery();
             while (rs.next())
             {
-                artisan = new Artisans(rs.getString("nomArtisan"),
+                artisan = new Artisans(rs.getInt("idArtisan"),
+                        rs.getString("nomArtisan"),
                         rs.getString("prenomArtisan"),
                         rs.getString("lebelleCat"),
                         rs.getString("ville")
@@ -89,4 +91,28 @@ public class ClientsDaoImp implements ClientDao {
         }
         return null;
     }
+
+    @Override
+    public List<Products> GetAllProducts(int idArtisan) {
+        List<Products> productsList = new ArrayList<Products>();
+        Products product = new Products();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
+            PreparedStatement ps = cn.prepareStatement("select * from produits P ,Artisan A , categories C where P.idArtisan=A.idArtisan and A.idCat=C.idCat and P.idArtisan='"+idArtisan+"'");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                product = new Products(rs.getString("nomProduit"),
+                        rs.getDouble("prixProduits"),
+                        rs.getString("lebelleCat")
+                );
+                productsList.add(product);
+            }
+            return productsList;
+        }catch(Exception E){
+            System.out.println(E);
+        }
+        return null;
+    }
+
 }

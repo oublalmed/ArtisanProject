@@ -402,14 +402,14 @@
                 <article class="product">
                     <header>
                         <a class="remove">
-                            <img src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/1.jpg" alt="">
-                            <h3>Remove     <span class="fa fa-trash-o" aria-hidden="true"></span></h3>
+                            <img src="img/work-14.jpg" alt="">
+                            <h3>Remove <span class="fa fa-trash-o" aria-hidden="true"></span></h3>
                         </a>
                     </header>
 
                     <div class="content">
 
-                        <h1>Item 1</h1>
+                        <h1>tapis blanc</h1>
 
                         <p>
                             Description
@@ -422,27 +422,25 @@
                         <span class="qt-plus">+</span>
 
                         <h2 class="full-price">
-                            29.98€
+                            2000 MAD
                         </h2>
 
                         <h2 class="price">
-                            14.99€
+                            2000 MAD
                         </h2>
                     </footer>
                 </article>
-
                 <article class="product">
                     <header>
                         <a class="remove">
-                            <img src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/3.jpg" alt="">
-
-                            <h3>Remove    <span class="fa fa-trash-o" aria-hidden="true"></span></h3>
+                            <img src="img/work-14.jpg" alt="">
+                            <h3>Remove <span class="fa fa-trash-o" aria-hidden="true"></span></h3>
                         </a>
                     </header>
 
                     <div class="content">
 
-                        <h1>Item 2</h1>
+                        <h1>tapis berbére</h1>
 
                         <p>
                             Description
@@ -450,63 +448,30 @@
                     </div>
 
                     <footer class="content">
-
                         <span class="qt-minus">-</span>
                         <span class="qt" style="color: #000;">1</span>
                         <span class="qt-plus">+</span>
 
                         <h2 class="full-price">
-                            79.99€
+                            1600 MAD
                         </h2>
 
                         <h2 class="price">
-                            79.99€
-                        </h2>
-                    </footer>
-                </article>
-
-                <article class="product">
-                    <header>
-                        <a class="remove">
-                            <img src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/5.jpg" alt="">
-
-                            <h3>Remove   <span class="fa fa-trash-o" aria-hidden="true"></span></h3>
-                        </a>
-                    </header>
-
-                    <div class="content">
-
-                        <h1>Item 3</h1>
-                        <p>
-                            Description
-                        </p>
-                    </div>
-
-                    <footer class="content">
-
-                        <span class="qt-minus">-</span>
-                        <span class="qt" style="color: #000;">1</span>
-                        <span class="qt-plus">+</span>
-
-                        <h2 class="full-price">
-                            53.99€
-                        </h2>
-
-                        <h2 class="price">
-                            17.99€
+                            1600 MAD
                         </h2>
                     </footer>
                 </article>
             </section>
         </div>
         <div class="col">
-                <div class="container clearfix">
-                    <div class="right">
-                        <h1 class="total">Total: <span>177.16</span>€</h1><HR>
-                        <button class="btn btn-outline-danger">Checkout</button>
-                    </div>
-
+            <div class="container clearfix">
+                <div class="right">
+                    <h1 class="total">Total: <span>3600</span>MAD</h1>
+                    <HR>
+                    <button class="btn btn-outline-danger">Checkout</button>
                 </div>
+
+            </div>
         </div>
     </div>
 </div>

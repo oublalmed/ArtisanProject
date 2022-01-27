@@ -1,3 +1,4 @@
+
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="com.example.artisansproject.DAO.ArtisansDaoImp" %>
 <%@ page import="java.util.List" %>
@@ -35,7 +36,7 @@
 <%
     List<Artisans> artisansList = (List<Artisans>) session.getAttribute("artisansList");
     for (int i = 0; i < artisansList.size(); i++) {
-        String filename= Paths.get(artisansList.get(i).getImage()).getFileName().toString();
+       String filename= Paths.get(artisansList.get(i).getImage()).getFileName().toString();
 %>
 <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav" style="background-color: transparent">
     <div class="container">
@@ -148,7 +149,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="AddProduct" method="post">
+                    <form action="AddProduct" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-12 col-lg-12">
                                 <div class="form-group">
@@ -234,15 +235,14 @@
                             <td>
                                 <form METHOD="post" ACTION="DeletePrd">
                                     <input type="hidden" name="idProduit" value="<%=rs.getInt("idProduit")%>">
-                                <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete
-                                </button>
+                                    <button type="submit" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+                                    </button>
                                 </form>
-                           </td>
+                            </td>
                         </tr>
                         <%
                                 }
                             }catch (Exception E){
-
                             }
                         %>
                         </tbody>
@@ -332,4 +332,5 @@
 
 </body>
 </html>
+
 

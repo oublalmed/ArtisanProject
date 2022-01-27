@@ -111,9 +111,9 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-1.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-13.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-1.jpg" alt="" class="img-fluid"/>
+                            <img src="img/work-13.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -136,9 +136,9 @@
             </div>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-12.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid"/>
+                            <img src="img/work-12.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -161,9 +161,9 @@
             </div>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-14.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid"/>
+                            <img src="img/work-14.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -292,9 +292,9 @@
             </div>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-12.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid"/>
+                            <img src="img/work-12.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -444,9 +444,9 @@
             </div>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-15.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid"/>
+                            <img src="img/work-15.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
@@ -596,9 +596,9 @@
             </div>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-13.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid"/>
+                            <img src="img/work-13.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">

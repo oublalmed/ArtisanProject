@@ -23,12 +23,12 @@ public class ArtisansDaoImp implements ArtisanDao{
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
-            PreparedStatement ps = cn.prepareStatement("select nomArtisan,prenomArtisan,resume,lebelleCat,imageArtisan from artisan A , categories C where A.idCat=C.idCat and idArtisan ='"+id+"'" );
+            PreparedStatement ps = cn.prepareStatement("select idArtisan,nomArtisan,prenomArtisan,resume,lebelleCat,imageArtisan from artisan A , categories C where A.idCat=C.idCat and idArtisan ='"+id+"'" );
             ResultSet rs = ps.executeQuery();
             List<Artisans> listArtisans = new ArrayList<Artisans>();
             while(rs.next()){
                 Artisans artisans = new Artisans(
-
+                        rs.getInt("idArtisan"),
                         rs.getString("nomArtisan"),
                         rs.getString("prenomArtisan"),
                         rs.getString("resume"),
@@ -89,4 +89,5 @@ public class ArtisansDaoImp implements ArtisanDao{
         return -1;
     }
 
-    }
+
+}

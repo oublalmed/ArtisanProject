@@ -1,4 +1,7 @@
 <%@ page import="java.sql.DriverManager" %>
+<%@ page import="com.example.artisansproject.Models.Products" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.nio.file.Paths" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -77,6 +80,47 @@
 
 <!--/ Nav End /-->
 <!--/ Section Portfolio Star /-->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .rate {
+        float: left;
+        height: 40px;
+        padding: 0 10px;
+    }
+    .rate:not(:checked) > input {
+        position:absolute;
+        top:-9999px;
+    }
+    .rate:not(:checked) > label {
+        float:right;
+        width:1em;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor:pointer;
+        font-size:30px;
+        color:#ccc;
+    }
+    .rate:not(:checked) > label:before {
+        content: '★ ';
+    }
+    .rate > input:checked ~ label {
+        color: #be3131;
+    }
+    .rate:not(:checked) > label:hover,
+    .rate:not(:checked) > label:hover ~ label {
+        color: #be3131;
+    }
+    .rate > input:checked + label:hover,
+    .rate > input:checked + label:hover ~ label,
+    .rate > input:checked ~ label:hover,
+    .rate > input:checked ~ label:hover ~ label,
+    .rate > label:hover ~ input:checked ~ label {
+        color: #be3131;
+    }
+</style>
 
 <section id="work" class="portfolio-mf sect-pt4 route">
     <div class="container">
@@ -89,61 +133,27 @@
                 </div>
             </div>
         </div>
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            .rate {
-                float: left;
-                height: 40px;
-                padding: 0 10px;
-            }
-            .rate:not(:checked) > input {
-                position:absolute;
-                top:-9999px;
-            }
-            .rate:not(:checked) > label {
-                float:right;
-                width:1em;
-                overflow:hidden;
-                white-space:nowrap;
-                cursor:pointer;
-                font-size:30px;
-                color:#ccc;
-            }
-            .rate:not(:checked) > label:before {
-                content: '★ ';
-            }
-            .rate > input:checked ~ label {
-                color: #be3131;
-            }
-            .rate:not(:checked) > label:hover,
-            .rate:not(:checked) > label:hover ~ label {
-                color: #be3131;
-            }
-            .rate > input:checked + label:hover,
-            .rate > input:checked + label:hover ~ label,
-            .rate > input:checked ~ label:hover,
-            .rate > input:checked ~ label:hover ~ label,
-            .rate > label:hover ~ input:checked ~ label {
-                color: #be3131;
-            }
-        </style>
+
         <div class="row">
+            <%
+                List<Products> productsList = (List<Products>) session.getAttribute("produitsList");
+                System.out.println(productsList);
+                for (int i = 0; i < productsList.size(); i++) {
+
+            %>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-1.jpg" data-lightbox="gallery-mf">
+                    <a href="img/work-14.jpg" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-1.jpg" alt="" class="img-fluid"/>
+                            <img src="img/work-14.jpg" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Tapis d'Atlas</h2>
+                                <div class="col">
+                                    <h2 class="w-title"><%=productsList.get(i).getNamePrd()%></h2>
                                     <div class="w-more">
-                                        <span class="w-ctegory">Tapis marocaine</span> /
-                                        <span class="w-price">1000DH</span>
+                                        <span class="w-ctegory"><%=productsList.get(i).getLibelle()%></span> /
+                                        <span class="w-price"><%=productsList.get(i).getPrice()%>DH</span>
                                     </div>
                                     <div class="mid-2">
                                         <div class="rate">
@@ -163,7 +173,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                       <span href="#" data-name="Tapis" data-price="1000" class="add-to-cart iconify" data-icon="ion:cart-outline" name="btn_start" value="Demarrer" onclick="demarre()"> </span>
+                                       <span href="#" data-name="<%=productsList.get(i).getNamePrd()%>" data-price="<%=productsList.get(i).getPrice()%>" class="add-to-cart iconify" data-icon="ion:cart-outline" name="btn_start" value="Demarrer" onclick="demarre()"> </span>
                                     </div>
                                 </div>
                             </div>
@@ -171,6 +181,9 @@
                     </a>
                 </div>
             </div>
+            <%
+                }
+            %>
         </div>
     </div>
 </section>-->

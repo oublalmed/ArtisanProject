@@ -449,7 +449,10 @@
                             </p>
                             <p class="sub-paragraph midd-para-team"><span
                                     class="fa fa-map-marker"></span> <%=artisansList.get(i).getVille()%> .</p>
-                            <a href="Products.jsp" class="profile">View products </a>
+                            <form method="post" action="GetAllProducts">
+                                <input type="hidden" name="idArtisan" value="<%=artisansList.get(i).getIdArtisan()%>" >
+                            <button type="submit" class="profile btn btn-primary">View products </button>
+                            </form>
                         </div>
                         <div class="buttons-teams">
                             <a href="#team"><span class="fa fa-facebook-square"></span></a>

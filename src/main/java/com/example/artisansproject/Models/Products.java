@@ -8,6 +8,7 @@ public class Products {
     private String imagePrd;
     private String descPrd ;
     private int idArtisan;
+    private String libelle;
 
     public Products(){
 
@@ -31,11 +32,21 @@ public class Products {
         this.price = price;
     }
 
+    public Products(String namePrd, double price, String libelle) {
+        this.namePrd = namePrd;
+        this.price = price;
+        this.libelle = libelle;
+    }
+
     public Products(String nomProduit, String descPrd, int qteProduits, double prixProduits) {
         this.namePrd = namePrd;
         this.descPrd=descPrd;
         this.qte = qte;
         this.price = price;
+    }
+
+    public String getLibelle() {
+        return libelle;
     }
 
     public int getIdPrd() {
