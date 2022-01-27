@@ -65,7 +65,7 @@
                 %>
                 &nbsp
                 <li class="nav-item">
-                    <button class="btn btn-outline-secondary" style="border: none"><strong> <span class="iconify" data-icon="ion:cart-outline" style="color: #FFFFFF;"></span> ( 0 )</strong> </button>
+                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#cart" style="background: transparent;border: none;"><span class=" iconify" data-icon="ion:cart-outline" style="color: white"></span>  (<span class="total-count" style="color: white"></span>)</button>
                 </li>
 
             </ul>
@@ -153,7 +153,7 @@
                                             <label for="star4" title="text">4 stars</label>
                                             <input type="radio" id="star3" name="rate" value="3" checked/>
                                             <label for="star3" title="text">3 stars</label>
-                                            <input type="radio" id="star2" name="rate" value="2" />
+                                            <input type="radio" id="star2" name="rate" value="2" checked/>
                                             <label for="star2" title="text">2 stars</label>
                                             <input type="radio" id="star1" name="rate" value="1" />
                                             <label for="star1" title="text">1 star</label>
@@ -163,592 +163,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid" width="275" height="183"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Loreda Cuno Nere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-4.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-4.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Bindo Laro Cado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-5.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-5.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Lena Mado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-6.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-6.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Big Bang</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2017</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ************** -->
-
-        <!-- Zyada start -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-1.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-1.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Lorem impsum dolor</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-12.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-12.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Loreda Cuno Nere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-3.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-13.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-13.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Bindo Laro Cado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-5.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-5.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Lena Mado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-6.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-6.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Big Bang</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2017</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-13.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-13.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Lorem impsum dolor</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-14.jpg data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-12.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Loreda Cuno Nere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-8.jpg.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-4.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-4.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Bindo Laro Cado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-5.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-5.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Lena Mado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-6.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-6.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Big Bang</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2017</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-1.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-9.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Lorem impsum dolor</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-2.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-2.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Loreda Cuno Nere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-3.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-13.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-4.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-15.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Bindo Laro Cado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-5.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-5.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Lena Mado</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2018</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="work-box">
-                    <a href="img/work-6.jpg" data-lightbox="gallery-mf">
-                        <div class="work-img">
-                            <img src="img/work-6.jpg" alt="" class="img-fluid"/>
-                        </div>
-                        <div class="work-content">
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <h2 class="w-title">Studio Big Bang</h2>
-                                    <div class="w-more">
-                                        <span class="w-ctegory">Web Design</span> /
-                                        <span class="w-date">18 Sep. 2017</span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="w-like">
-                                        <span class="iconify" data-icon="ion:cart-outline"></span>
+                                       <span href="#" data-name="Tapis" data-price="1000" class="add-to-cart iconify" data-icon="ion:cart-outline" name="btn_start" value="Demarrer" onclick="demarre()"> </span>
                                     </div>
                                 </div>
                             </div>
@@ -758,7 +173,98 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
+<!-- Modal -->
+<div class="modal fade " id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><span class="iconify" data-icon="ion:cart-outline"></span>   Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="show-cart table">
+
+                </table>
+                <div><strong> price: <span class="total-cart"></span> MAD</strong></div><hr>
+                <h6 class="chrono shine fw-light" style="color: red;"><span class="iconify" data-icon="gis:timer"></span><time id="txt" STYLE="margin-left: 10px">00:00:00</time></h6>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="Cart.jsp"><button type="button" class="btn btn-danger" >Order now</button></a>
+                <button type="button" class="clear-cart btn btn-success" onclick="stop()">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var s='0'+0,m='0'+0,h='0'+0;
+    var t,j,ds=0,dh=0;
+    var encours=0;
+    var ms=0;
+
+    function milis()
+    {
+        ms++;
+        if(ms==1000) ms=0;
+        document.getElementById('milis').textContent=ms;
+        j=setTimeout("milis()",1);
+    }
+
+    function Count()
+    {
+        s++;
+        if(s==60)
+        {
+            s=0;
+            m++;
+            if(m<10 && ds<10)
+            {
+                m="0"+m;
+                ds++;
+            }
+            else m=m;
+        }
+        if(m==60)
+        {
+            m=0;
+            h++;
+            if(h<10 && dh<10)
+            {
+                h="0"+h;
+                dh++;
+            }
+            else h=h;
+        }
+
+        if(s < 10) s='0'+s;
+        document.getElementById('txt').textContent=h+':'+m+':'+s;
+        t=setTimeout("Count()",1000);
+    }
+
+    function demarre()
+    {
+        if (!encours)
+        {
+            encours=1;
+            Count();
+            milis();
+        }
+    }
+    function stop(){
+        clearTimeout(t);
+        clearTimeout(j);
+        encours=0;
+        h='0'+0;
+        m='0'+0;
+        s='0'+0;
+        ms=0;
+        document.getElementById('txt').textContent=h+':'+m+':'+s;
+    }
+
+</script>
 <!--/ Section Portfolio End /-->
 <!--/ Section Contact-Footer Star /-->
 <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
@@ -787,6 +293,216 @@
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 <div id="preloader"></div>
 
+<script>
+    // ************************************************
+    // Shopping Cart API
+    // ************************************************
+
+    var shoppingCart = (function() {
+
+        cart = [];
+
+        // Constructor
+        function Item(name, price, count) {
+            this.name = name;
+            this.price = price;
+            this.count = count;
+        }
+
+        // Save cart
+        function saveCart() {
+            sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+        }
+
+        // Load cart
+        function loadCart() {
+            cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+        }
+        if (sessionStorage.getItem("shoppingCart") != null) {
+            loadCart();
+        }
+
+
+        // =============================
+        // Public methods and propeties
+        // =============================
+        var obj = {};
+
+        // Add to cart
+        obj.addItemToCart = function(name, price, count) {
+            for(var item in cart) {
+                if(cart[item].name === name) {
+                    cart[item].count ++;
+                    saveCart();
+                    return;
+                }
+            }
+            var item = new Item(name, price, count);
+            cart.push(item);
+            saveCart();
+        }
+        // Set count from item
+        obj.setCountForItem = function(name, count) {
+            for(var i in cart) {
+                if (cart[i].name === name) {
+                    cart[i].count = count;
+                    break;
+                }
+            }
+        };
+        // Remove item from cart
+        obj.removeItemFromCart = function(name) {
+            for(var item in cart) {
+                if(cart[item].name === name) {
+                    cart[item].count --;
+                    if(cart[item].count === 0) {
+                        cart.splice(item, 1);
+                    }
+                    break;
+                }
+            }
+            saveCart();
+        }
+
+        // Remove all items from cart
+        obj.removeItemFromCartAll = function(name) {
+            for(var item in cart) {
+                if(cart[item].name === name) {
+                    cart.splice(item, 1);
+                    break;
+                }
+            }
+            saveCart();
+        }
+
+        // Clear cart
+        obj.clearCart = function() {
+            cart = [];
+            saveCart();
+        }
+
+        // Count cart
+        obj.totalCount = function() {
+            var totalCount = 0;
+            for(var item in cart) {
+                totalCount += cart[item].count;
+            }
+            return totalCount;
+        }
+
+        // Total cart
+        obj.totalCart = function() {
+            var totalCart = 0;
+            for(var item in cart) {
+                totalCart += cart[item].price * cart[item].count;
+            }
+            return Number(totalCart.toFixed(2));
+        }
+
+        // List cart
+        obj.listCart = function() {
+            var cartCopy = [];
+            for(i in cart) {
+                item = cart[i];
+                itemCopy = {};
+                for(p in item) {
+                    itemCopy[p] = item[p];
+
+                }
+                itemCopy.total = Number(item.price * item.count).toFixed(2);
+                cartCopy.push(itemCopy)
+            }
+            return cartCopy;
+        }
+
+        // cart : Array
+        // Item : Object/Class
+        // addItemToCart : Function
+        // removeItemFromCart : Function
+        // removeItemFromCartAll : Function
+        // clearCart : Function
+        // countCart : Function
+        // totalCart : Function
+        // listCart : Function
+        // saveCart : Function
+        // loadCart : Function
+        return obj;
+    })();
+
+
+    // *****************************************
+    // Triggers / Events
+    // *****************************************
+    // Add item
+    $('.add-to-cart').click(function(event) {
+        event.preventDefault();
+        var name = $(this).data('name');
+        var price = Number($(this).data('price'));
+        shoppingCart.addItemToCart(name, price, 1);
+        displayCart();
+    });
+
+    // Clear items
+    $('.clear-cart').click(function() {
+        shoppingCart.clearCart();
+        displayCart();
+    });
+
+
+    function displayCart() {
+        var cartArray = shoppingCart.listCart();
+        var output = "";
+        for(var i in cartArray) {
+            output += "<tr>"
+                + "<td>" + cartArray[i].name + "</td>"
+                + "<td>(" + cartArray[i].price + ")</td>"
+                + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+                + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+                + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+                + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+                + " = "
+                + "<td>" + cartArray[i].total + "</td>"
+                +  "</tr>";
+        }
+        $('.show-cart').html(output);
+        $('.total-cart').html(shoppingCart.totalCart());
+        $('.total-count').html(shoppingCart.totalCount());
+    }
+
+    // Delete item button
+
+    $('.show-cart').on("click", ".delete-item", function(event) {
+        var name = $(this).data('name')
+        shoppingCart.removeItemFromCartAll(name);
+        displayCart();
+    })
+
+
+    // -1
+    $('.show-cart').on("click", ".minus-item", function(event) {
+        var name = $(this).data('name')
+        shoppingCart.removeItemFromCart(name);
+        displayCart();
+    })
+    // +1
+    $('.show-cart').on("click", ".plus-item", function(event) {
+        var name = $(this).data('name')
+        shoppingCart.addItemToCart(name);
+        displayCart();
+    })
+
+    // Item count input
+    $('.show-cart').on("change", ".item-count", function(event) {
+        var name = $(this).data('name');
+        var count = Number($(this).val());
+        shoppingCart.setCountForItem(name, count);
+        displayCart();
+    });
+
+    displayCart();
+
+</script>
+
 <!-- JavaScript Libraries -->
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -802,6 +518,7 @@
 <script src="contactform/contactform.js"></script>
 
 <!-- Template Main Javascript File -->
-<script src="js/main.js"></script>
+<script src="js/main.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="js/Cart.js"></script>
 </body>
 </html>

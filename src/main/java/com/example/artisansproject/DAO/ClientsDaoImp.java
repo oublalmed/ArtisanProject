@@ -72,14 +72,14 @@ public class ClientsDaoImp implements ClientDao {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
-            PreparedStatement ps = cn.prepareStatement("select * from artisan a , categories c where a.idCat=c.idCat and lebelleCat ='"+SearchArt+"'");
+            PreparedStatement ps = cn.prepareStatement("select * from artisan a , categories c where a.idCat=c.idCat and etat = 'Active' and lebelleCat ='"+SearchArt+"'");
             ResultSet rs = ps.executeQuery();
             while (rs.next())
             {
                 artisan = new Artisans(rs.getString("nomArtisan"),
                         rs.getString("prenomArtisan"),
-                        rs.getString("ville"),
-                        rs.getString("lebelleCat")
+                        rs.getString("lebelleCat"),
+                        rs.getString("ville")
                 );
                 artisansList.add(artisan);
             }
