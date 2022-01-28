@@ -26,6 +26,10 @@ public class GetAllProducts extends HttpServlet {
         ClientsDaoImp clientsDaoImp=new ClientsDaoImp();
         clientsDaoImp.GetAllProducts(idArtisan);
         List<Products> produitsList = clientsDaoImp.GetAllProducts(idArtisan);
+        for (Products products : produitsList){
+            System.out.println(products.getImagePrd());
+            System.out.println(products.getNamePrd());
+        }
         session.setAttribute("produitsList",produitsList);
         response.sendRedirect("Products.jsp");
     }

@@ -25,16 +25,17 @@ public class ProductsDaoImp implements PruductsDao{
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
-            PreparedStatement ps = cn.prepareStatement("select nomProduit,descProduit,QteProduits,prixProduits from artisan A , produits P where A.idArtisan=P.idArtisan and P.idArtisan=5");
+            PreparedStatement ps = cn.prepareStatement("select nomProduit,descProduit,QteProduits,prixProduits,imagePrd from artisan A , produits P where A.idArtisan=P.idArtisan and P.idArtisan=?");
+            ps.setInt(1,id);
             ResultSet rs = ps.executeQuery();
             List<Products> listProducts = new ArrayList<Products>();
             while(rs.next()){
                 Products product = new Products(
-
                         rs.getString("nomProduit"),
                         rs.getString("descProduit"),
                         rs.getInt("QteProduits"),
                         rs.getDouble("prixProduits")
+
                 );
                 listProducts.add(product);
             }

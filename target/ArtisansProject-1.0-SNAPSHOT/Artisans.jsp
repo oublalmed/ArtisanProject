@@ -1,6 +1,7 @@
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="com.example.artisansproject.Models.Artisans" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.example.artisansproject.Models.Clients" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,6 +23,7 @@
 
 <body id="page-top">
 <!--/ Nav Star /-->
+<!--/ Nav Star /-->
 <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand js-scroll" href="#page-top"><span class="fa fa-paint-brush"></span> Artisan</a>
@@ -34,27 +36,28 @@
         <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll " href="Home.jsp">Home</a>
+                    <a class="nav-link js-scroll active" href="Home.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll" href="AboutUs.jsp">About</a>
+                    <a class="nav-link js-scroll" href="AboutUs.jsp">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll active" href="Artisans.jsp">Artisans</a>
+                    <a class="nav-link js-scroll " href="Artisans.jsp">Artisans</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="ContactUs.jsp">Contact Us</a>
                 </li>
                 <%
-                    request.getSession(false);
-                    //Clients client = (Clients) session.getAttribute("client");
-                    if (session == null) {
+                    session= request.getSession();
+                    List<Clients> client = (List<Clients>) session.getAttribute("ClientList");
+                    if (client == null) {
                 %>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="index.jsp">Sign Up</a>
                 </li>
                 <%
-                } else {
+                }
+                else{
                 %>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="LogOut">Log Out</a>
@@ -66,7 +69,7 @@
         </div>
     </div>
 </nav>
-<!--/ Nav End /-->
+<!--/ Nav End /--><!--/ Nav End /-->
 <!--/ Intro Skew Star /-->
 <div id="home" class="breadcrumb-bg breadcrumb-bg-about py-5" style="background-image: url(img/bg1.jpg)">
     <div class="overlay-itro"></div>

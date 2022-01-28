@@ -1,12 +1,11 @@
 package com.example.artisansproject.Controllers;
 
+import com.example.artisansproject.Models.Artisans;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
+import javax.servlet.http.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,6 +13,7 @@ import java.nio.file.Files;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.List;
 
 @MultipartConfig
 @WebServlet("/AddProduct")
@@ -40,8 +40,10 @@ public class AddProduct extends HttpServlet {
             File fileSaveDir2 = new File(savePath2);
             copyFile(fileSaveDir, fileSaveDir2);
         }
+        HttpSession session=request.getSession();
+        List<Artisans> artisansList = (List<Artisans>) session.getAttribute("artisansList") ;
+        int id=artisansList.get(0).getIdArtisan();
 
-        int id=5;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false","root","");

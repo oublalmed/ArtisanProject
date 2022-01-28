@@ -32,13 +32,14 @@ public class Products {
         this.price = price;
     }
 
-    public Products(String namePrd, double price, String libelle) {
+    public Products(String namePrd, double price, String libelle,String imagePrd) {
         this.namePrd = namePrd;
         this.price = price;
         this.libelle = libelle;
+        this.imagePrd =imagePrd;
     }
 
-    public Products(String nomProduit, String descPrd, int qteProduits, double prixProduits) {
+    public Products(String namePrd, String descPrd, int qte, double price) {
         this.namePrd = namePrd;
         this.descPrd=descPrd;
         this.qte = qte;

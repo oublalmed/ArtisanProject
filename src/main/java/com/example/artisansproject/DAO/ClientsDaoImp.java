@@ -104,7 +104,8 @@ public class ClientsDaoImp implements ClientDao {
             while (rs.next()) {
                 product = new Products(rs.getString("nomProduit"),
                         rs.getDouble("prixProduits"),
-                        rs.getString("lebelleCat")
+                        rs.getString("lebelleCat"),
+                        rs.getString("imagePrd")
                 );
                 productsList.add(product);
             }

@@ -106,9 +106,36 @@
     </div>
 </section>
 <BR><BR><BR>
+<!-- The Modal -->
+<div class="modal fade" id="myModal1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Update Resume</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="/AddCat" method="post">
+                    <div class="row">
+                        <div class="col-12 col-lg-12">
+                            <div class="form-group">
+                                <textarea name="resume" rows="5" cols="60" placeholder=" Update resume ..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success" name="saveD">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <section CLASS="card" style="  margin-right: 150px;margin-left: 150px;">
     <div class="card-body">
-        <h4 class="card-title">Resume</h4>
+        <h4 class="card-title">Resume &nbsp &nbsp<span class="fa fa-pencil-square-o" aria-hidden="true" data-toggle="modal" data-target="#myModal1"></span></h4>
         <p class="card-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
             of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
             professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
@@ -219,7 +246,9 @@
                             try{
                                 Class.forName("com.mysql.jdbc.Driver");
                                 Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
-                                PreparedStatement ps = cn.prepareStatement("select * from produits");
+                                int id=artisansList.get(0).getIdArtisan();
+                                PreparedStatement ps = cn.prepareStatement("select * from produits where idArtisan =?");
+                                ps.setInt(1,id);
                                 ResultSet rs = ps.executeQuery();
                                 while(rs.next()){
                         %>

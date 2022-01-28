@@ -2,6 +2,7 @@
 <%@ page import="com.example.artisansproject.Models.Products" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.nio.file.Paths" %>
+<%@ page import="com.example.artisansproject.Models.Clients" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -37,7 +38,7 @@
         <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll " href="Home.jsp">Home</a>
+                    <a class="nav-link js-scroll active" href="Home.jsp">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="AboutUs.jsp">About Us</a>
@@ -49,9 +50,10 @@
                     <a class="nav-link js-scroll" href="ContactUs.jsp">Contact Us</a>
                 </li>
                 <%
-                    request.getSession(false);
-                    //Clients client = (Clients) session.getAttribute("client");
-                    if (session == null) {
+
+                    session= request.getSession();
+                    List<Clients> client = (List<Clients>) session.getAttribute("ClientList");
+                    if (client == null) {
                 %>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="index.jsp">Sign Up</a>
@@ -139,13 +141,14 @@
                 List<Products> productsList = (List<Products>) session.getAttribute("produitsList");
                 System.out.println(productsList);
                 for (int i = 0; i < productsList.size(); i++) {
-
+                    String filename= Paths.get(productsList.get(i).getImagePrd()).getFileName().toString();
+                    System.out.println(productsList.get(i).getImagePrd());
             %>
             <div class="col-md-4">
                 <div class="work-box">
-                    <a href="img/work-14.jpg" data-lightbox="gallery-mf">
+                    <a href="img/<%=filename%>" data-lightbox="gallery-mf">
                         <div class="work-img">
-                            <img src="img/work-14.jpg" alt="" class="img-fluid"/>
+                            <img src="img/<%=filename%>" alt="" class="img-fluid"/>
                         </div>
                         <div class="work-content">
                             <div class="row">

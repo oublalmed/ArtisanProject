@@ -408,9 +408,7 @@
                     </header>
 
                     <div class="content">
-
                         <h1>tapis blanc</h1>
-
                         <p>
                             Description
                         </p>
