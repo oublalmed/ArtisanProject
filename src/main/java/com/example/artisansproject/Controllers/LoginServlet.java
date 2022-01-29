@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
             else{
 
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Invalid Username or Password');");
+                out.println("alert('Invalid Username or Password Or Account is disabled');");
                 out.println("location='index.jsp';");
                 out.println("</script>");
             }

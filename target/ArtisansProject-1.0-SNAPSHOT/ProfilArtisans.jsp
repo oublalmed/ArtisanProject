@@ -318,14 +318,29 @@
                             <th scope="col">Facture</th>
                         </tr>
                         </thead>
+                        <%
+                            try{
+                                Class.forName("com.mysql.jdbc.Driver");
+                                Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/artisanbd?useSSL=false", "root", "");
+                                int id=artisansList.get(0).getIdArtisan();
+                                PreparedStatement ps = cn.prepareStatement("select * from Cart");
+                                //ps.setInt(1,id);
+                                ResultSet rs = ps.executeQuery();
+                                while(rs.next()){
+                        %>
                         <tbody>
                         <tr>
                             <th scope="row"></th>
+                            <td><%=rs.getString("nomPrd")%></td>
+                            <td><%=rs.getString("price")%></td>
+                            <td><%=rs.getInt("qtePrd")%></td>
                             <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
                         </tr>
+                        <%
+                                }
+                            }catch (Exception E){
+                            }
+                        %>
                         </tbody>
                     </table>
                 </div>

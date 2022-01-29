@@ -2,6 +2,7 @@
 <%@ page import="com.example.artisansproject.Models.Artisans" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.artisansproject.Models.Clients" %>
+<%@ page import="java.nio.file.Paths" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -36,13 +37,13 @@
         <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll active" href="Home.jsp">Home</a>
+                    <a class="nav-link js-scroll " href="Home.jsp">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="AboutUs.jsp">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll " href="Artisans.jsp">Artisans</a>
+                    <a class="nav-link js-scroll active" href="Artisans.jsp">Artisans</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="ContactUs.jsp">Contact Us</a>
@@ -437,10 +438,11 @@
                     List<Artisans> artisansList = (List<Artisans>) session.getAttribute("list");
                     System.out.println(artisansList);
                     for (int i = 0; i < artisansList.size(); i++) {
+                        String filename= Paths.get(artisansList.get(i).getImage()).getFileName().toString();
                 %>
                 <div class="team-main-19">
                     <div class="column-19">
-                        <a href="Products.jsp"><img class="image" src="img/c3.jpg" alt=" "></a>
+                        <a href="Products.jsp"><img class="image" src="img/<%=filename%>" alt=" "></a>
                     </div>
                     <div class="right-team-9">
                         <div class="sub-grid-33">

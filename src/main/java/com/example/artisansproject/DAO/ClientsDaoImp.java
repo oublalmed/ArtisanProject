@@ -81,7 +81,8 @@ public class ClientsDaoImp implements ClientDao {
                         rs.getString("nomArtisan"),
                         rs.getString("prenomArtisan"),
                         rs.getString("lebelleCat"),
-                        rs.getString("ville")
+                        rs.getString("ville"),
+                        rs.getString("imageArtisan")
                 );
                 artisansList.add(artisan);
             }

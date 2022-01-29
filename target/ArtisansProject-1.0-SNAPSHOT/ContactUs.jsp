@@ -22,7 +22,7 @@
 <body id="page-top">
 <!--/ Nav Star /-->
 <!--/ Nav Star /-->
-<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+<nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav" STYLE="background: black">
     <div class="container">
         <a class="navbar-brand js-scroll" href="#page-top"><span class="fa fa-paint-brush"></span> Artisan</a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
@@ -34,7 +34,7 @@
         <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll active" href="Home.jsp">Home</a>
+                    <a class="nav-link js-scroll " href="Home.jsp">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll" href="AboutUs.jsp">About Us</a>
@@ -43,7 +43,7 @@
                     <a class="nav-link js-scroll " href="Artisans.jsp">Artisans</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll" href="ContactUs.jsp">Contact Us</a>
+                    <a class="nav-link js-scroll active" href="ContactUs.jsp">Contact Us</a>
                 </li>
                 <%
 

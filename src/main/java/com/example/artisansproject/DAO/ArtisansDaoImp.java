@@ -31,7 +31,7 @@ public class ArtisansDaoImp implements ArtisanDao{
                         rs.getInt("idArtisan"),
                         rs.getString("nomArtisan"),
                         rs.getString("prenomArtisan"),
-                        rs.getString("resume"),
+                        //rs.getString("resume"),
                         rs.getString("lebelleCat"),
                         rs.getString("imageArtisan")
                 );

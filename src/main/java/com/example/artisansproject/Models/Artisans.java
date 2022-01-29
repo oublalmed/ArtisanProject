@@ -21,22 +21,24 @@ public class Artisans implements Serializable {
 
     }
 
-    public Artisans(int idArtisan,String nomArtisan, String prenomArtisan, String libelleCat, String ville) {
+    public Artisans(int idArtisan,String nomArtisan, String prenomArtisan, String libelleCat, String ville,String image) {
         this.idArtisan =idArtisan;
         this.nomArtisan = nomArtisan;
         this.prenomArtisan = prenomArtisan;
         this.libelleCat = libelleCat;
         this.ville = ville;
+        this.image=image;
     }
 
-    public Artisans(int idArtisan,String nomArtisan, String prenomArtisan, String resume, String libelleCat, String image) {
+    public Artisans(int idArtisan,String nomArtisan, String prenomArtisan, String libelleCat, String image) {
         this.idArtisan =idArtisan;
         this.nomArtisan = nomArtisan;
         this.prenomArtisan = prenomArtisan;
-        this.resume = resume;
         this.image = image;
         this.libelleCat = libelleCat;
     }
+
+
 
     public Artisans(int idArtisan, String nomArtisan, String prenomArtisan, String mailArtisan, String telArtisan, String resume, String password, String image, String dateNai, String idCat, String cinArtisan, String libelleCat) {
         this.idArtisan = idArtisan;

@@ -1,6 +1,10 @@
 <%@ page import="java.sql.DriverManager" %>
 <%@ page import="com.example.artisansproject.Models.Artisans" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.example.artisansproject.Models.Clients" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -402,60 +406,22 @@
                 <article class="product">
                     <header>
                         <a class="remove">
-                            <img src="img/work-14.jpg" alt="">
+                            <img src="img/work-5.jpg" alt="">
                             <h3>Remove <span class="fa fa-trash-o" aria-hidden="true"></span></h3>
                         </a>
                     </header>
-
                     <div class="content">
-                        <h1>tapis blanc</h1>
-                        <p>
-                            Description
-                        </p>
+                        <h1>Produit X</h1>
                     </div>
-
                     <footer class="content">
                         <span class="qt-minus">-</span>
                         <span class="qt" style="color: #000;">1</span>
                         <span class="qt-plus">+</span>
-
                         <h2 class="full-price">
-                            2000 MAD
+                            900 MAD
                         </h2>
-
                         <h2 class="price">
-                            2000 MAD
-                        </h2>
-                    </footer>
-                </article>
-                <article class="product">
-                    <header>
-                        <a class="remove">
-                            <img src="img/work-14.jpg" alt="">
-                            <h3>Remove <span class="fa fa-trash-o" aria-hidden="true"></span></h3>
-                        </a>
-                    </header>
-
-                    <div class="content">
-
-                        <h1>tapis berbére</h1>
-
-                        <p>
-                            Description
-                        </p>
-                    </div>
-
-                    <footer class="content">
-                        <span class="qt-minus">-</span>
-                        <span class="qt" style="color: #000;">1</span>
-                        <span class="qt-plus">+</span>
-
-                        <h2 class="full-price">
-                            1600 MAD
-                        </h2>
-
-                        <h2 class="price">
-                            1600 MAD
+                            900 MAD
                         </h2>
                     </footer>
                 </article>
@@ -464,11 +430,10 @@
         <div class="col">
             <div class="container clearfix">
                 <div class="right">
-                    <h1 class="total">Total: <span>3600</span>MAD</h1>
+                    <h1 class="full-price">Total: <span class="full-price">900</span>MAD</h1>
                     <HR>
-                    <button class="btn btn-outline-danger">Checkout</button>
+                    <button class="btn btn-outline-danger"><A href="Products.jsp">Checkout</A></button>
                 </div>
-
             </div>
         </div>
     </div>
@@ -487,7 +452,7 @@
                         </p>
                         <div class="credits">
                             Designed by
-                            <a href="#">Artisan</a>
+                            <a href="Home.jsp">Artisan</a>
                         </div>
                     </div>
                 </div>

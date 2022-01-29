@@ -47,7 +47,6 @@
                     <a class="nav-link js-scroll" href="ContactUs.jsp">Contact Us</a>
                 </li>
                 <%
-
                     session= request.getSession();
                     List<Clients> client = (List<Clients>) session.getAttribute("ClientList");
                     if (client == null) {
